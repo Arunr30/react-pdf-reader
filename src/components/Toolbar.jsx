@@ -9,7 +9,7 @@ export default function Toolbar() {
     canvas.isDrawingMode = true;
     canvas.freeDrawingBrush = new fabric.PencilBrush(canvas);
     canvas.freeDrawingBrush.width = 3;
-    canvas.freeDrawingBrush.color = "#ff1744"; // red
+    canvas.freeDrawingBrush.color = "#ff1744";
   };
 
   const addText = () => {
@@ -34,7 +34,6 @@ export default function Toolbar() {
     <div className="toolbar">
       <button onClick={addText}>Add Text</button>
       <button onClick={enableDraw}>Draw</button>
-      <button id="export-btn">Export PDF</button>
     </div>
   );
 }

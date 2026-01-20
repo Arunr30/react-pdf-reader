@@ -5,7 +5,10 @@ export async function exportPdf(originalFile, canvas) {
   const pdfDoc = await PDFDocument.load(bytes);
 
   const page = pdfDoc.getPages()[0];
-  const png = await pdfDoc.embedPng(canvas.toDataURL("image/png"));
+
+  const png = await pdfDoc.embedPng(
+    canvas.toDataURL({ format: "png" })
+  );
 
   page.drawImage(png, {
     x: 0,
@@ -14,6 +17,5 @@ export async function exportPdf(originalFile, canvas) {
     height: page.getHeight(),
   });
 
-  const finalPdf = await pdfDoc.save();
-  return finalPdf;
+  return await pdfDoc.save();
 }
