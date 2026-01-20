@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background: #f4f6fb;
+}
+
+.toolbar {
+  padding: 10px;
+  background: linear-gradient(90deg, #673ab7, #3f51b5);
+}
+
+.toolbar button {
+  margin-right: 8px;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  background: #fff;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.toolbar button:hover {
+  background: #ffeb3b;
+}
+
+.export {
+  margin: 10px;
+  padding: 10px 16px;
+  background: #00c853;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.viewer {
+  padding: 10px;
+}
